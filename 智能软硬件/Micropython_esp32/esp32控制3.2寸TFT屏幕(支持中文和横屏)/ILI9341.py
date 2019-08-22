@@ -11,7 +11,7 @@ _WAKE = const(0x11)
 _LINE_SET = const(0x37)
 
 #字库文件
-ch_path='myb/HZK16'
+ch_path='HZK16'
 
 def color565(r, g, b):
     return (r & 0xf8) << 8 | (g & 0xfc) << 3 | b >> 3
@@ -28,12 +28,12 @@ class ILI9341:
     #size is lcd.width * lcd.height
 
 
-    >>> import ili9341,colors
+    >>> import ili9341
     >>> from machine import Pin, SPI
-    >>> spi = SPI(miso=Pin('PA6'), mosi=Pin('PA7', Pin.OUT), sck=Pin('PA5', Pin.OUT))  #240*320 
+    >>> spi = SPI(miso=Pin(12), mosi=Pin(13, Pin.OUT), sck=Pin(14, Pin.OUT))  #240*320 
     #or add : scroll = True ->scroll 320*240
-    >>> display = ili9341.ILI9341(spi, cs=Pin('PA4'), dc=Pin('PC4'), rst=Pin('PC5'))
-    >>> display.fill(color = ili9341.color(PURPLE))
+    >>> display = ili9341.ILI9341(spi, cs=Pin(0), dc=Pin(5), rst=Pin(4))
+    >>> display.fill(ili9341.color565(0xff, 0x11, 0x22))
     >>> display.pixel(120, 160, 0)
     """
 
