@@ -1,0 +1,121 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Sun Aug  4 00:55:15 2019] ***
+compiled with version: 5.4.0 20160609 on 12 March 2019 09:37:59
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZ2ze7vdwpmzuz9gjt4768Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/django1_nginx
+writing pidfile to uwsgi.pid
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/django1_nginx
+your processes number limit is 7849
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /var/www/django1_nginx/django1.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1b39ea0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1b39ea0 pid: 1109 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 1109)
+spawned uWSGI worker 1 (pid: 1111, cores: 1)
+spawned uWSGI worker 2 (pid: 1112, cores: 1)
+spawned uWSGI worker 3 (pid: 1113, cores: 1)
+spawned uWSGI worker 4 (pid: 1114, cores: 1)
+spawned uWSGI worker 5 (pid: 1115, cores: 1)
+spawned uWSGI worker 6 (pid: 1116, cores: 1)
+spawned uWSGI worker 7 (pid: 1117, cores: 1)
+spawned uWSGI worker 8 (pid: 1118, cores: 1)
+spawned uWSGI worker 9 (pid: 1119, cores: 1)
+spawned uWSGI worker 10 (pid: 1120, cores: 1)
+...gracefully killing workers...
+Gracefully killing worker 1 (pid: 1111)...
+Gracefully killing worker 2 (pid: 1112)...
+Gracefully killing worker 3 (pid: 1113)...
+Gracefully killing worker 4 (pid: 1114)...
+Gracefully killing worker 5 (pid: 1115)...
+Gracefully killing worker 6 (pid: 1116)...
+Gracefully killing worker 7 (pid: 1117)...
+Gracefully killing worker 8 (pid: 1118)...
+Gracefully killing worker 9 (pid: 1119)...
+Gracefully killing worker 10 (pid: 1120)...
+worker 1 buried after 2 seconds
+worker 2 buried after 2 seconds
+worker 3 buried after 2 seconds
+worker 4 buried after 2 seconds
+worker 5 buried after 2 seconds
+worker 6 buried after 2 seconds
+worker 7 buried after 2 seconds
+worker 8 buried after 2 seconds
+worker 9 buried after 2 seconds
+worker 10 buried after 2 seconds
+binary reloading uWSGI...
+chdir() to /var/www/django1_nginx
+closing all non-uwsgi socket fds > 2 (max_fd = 65535)...
+found fd 3 mapped to socket 0 (/var/www/django1_nginx/django1.sock)
+running /usr/local/bin/uwsgi
+[uWSGI] getting INI configuration from uwsgi.ini
+*** Starting uWSGI 2.0.18 (64bit) on [Sat Aug  3 16:56:53 2019] ***
+compiled with version: 5.4.0 20160609 on 12 March 2019 09:37:59
+os: Linux-4.4.0-142-generic #168-Ubuntu SMP Wed Jan 16 21:00:45 UTC 2019
+nodename: iZ2ze7vdwpmzuz9gjt4768Z
+machine: x86_64
+clock source: unix
+detected number of CPU cores: 1
+current working directory: /var/www/django1_nginx
+detected binary path: /usr/local/bin/uwsgi
+!!! no internal routing support, rebuild with pcre support !!!
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+chdir() to /var/www/django1_nginx
+your processes number limit is 7849
+your memory page size is 4096 bytes
+detected max file descriptor number: 65535
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 inherited UNIX address /var/www/django1_nginx/django1.sock fd 3
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+Python version: 3.5.2 (default, Nov 12 2018, 13:43:14)  [GCC 5.4.0 20160609]
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x1b68ce0
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 801944 bytes (783 KB) for 10 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x1b68ce0 pid: 1109 (default app)
+uWSGI running as root, you can use --uid/--gid/--chroot options
+*** WARNING: you are running uWSGI as root !!! (use the --uid flag) *** 
+*** uWSGI is running in multiple interpreter mode ***
+gracefully (RE)spawned uWSGI master process (pid: 1109)
+spawned uWSGI worker 1 (pid: 1126, cores: 1)
+spawned uWSGI worker 2 (pid: 1127, cores: 1)
+spawned uWSGI worker 3 (pid: 1128, cores: 1)
+spawned uWSGI worker 4 (pid: 1129, cores: 1)
+spawned uWSGI worker 5 (pid: 1130, cores: 1)
+spawned uWSGI worker 6 (pid: 1131, cores: 1)
+spawned uWSGI worker 7 (pid: 1132, cores: 1)
+spawned uWSGI worker 8 (pid: 1133, cores: 1)
+spawned uWSGI worker 9 (pid: 1134, cores: 1)
+spawned uWSGI worker 10 (pid: 1135, cores: 1)
+/var/www/files/data/
+/var/www/files/data/13.txt
+[pid: 1128|app: 0|req: 1/1] 106.39.42.155 () {46 vars in 910 bytes} [Sat Aug  3 16:57:10 2019] POST /upfile/ => generated 43 bytes in 14 msecs (HTTP/1.1 200) 6 headers in 211 bytes (1 switches on core 0)
