@@ -53,4 +53,23 @@
   workbook.save('new.xlsx') #workbook.save('new.xls')
   ```
 
+
+
+
+- 字典处理
+
+  ```
+  my_dict = {}
+  my_dict['abc']='def'
+  my_dict[1] = [0]
+  my_dict[1].append(3) #1:[0,3]
   
+  for (a,b) in my_dict.items():
+  	#分别打印键值和内容
+  	print(a)
+  	print(b)  #如果是上面的数组，则b为[0,3]  b[0]<=>0,b[1]<=>3
+  	
+  ```
+
+  
+
