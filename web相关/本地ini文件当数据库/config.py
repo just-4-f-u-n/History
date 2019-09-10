@@ -13,6 +13,16 @@ class config():
             return value                
         except:
             return 0
+        pass
+    def readAll(self):
+        #if self.fileName in os.listdir():
+        try:
+            f = open(self.fileName,'r') 
+            data = json.loads(f.read())       
+            f.close()                  
+            return data                
+        except:
+            return 0            
     def writeConfig(self,dict):
         f = open(self.fileName,'w')     
         data = json.dumps(dict)       
