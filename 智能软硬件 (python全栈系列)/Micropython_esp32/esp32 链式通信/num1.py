@@ -88,7 +88,6 @@ def xiancheng1():
             print("up ok")
         else:
             print("receive from next is null")
-        
         time.sleep(3)
         
 def xiancheng2():
