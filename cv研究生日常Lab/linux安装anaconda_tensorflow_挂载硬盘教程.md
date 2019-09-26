@@ -57,3 +57,23 @@ anaconda show  DavidMertz/accelerate-skimage # 展示更多关于DavidMertz/acce
 
 最后一行就告诉你了下载地址。照做：conda install --channel https://conda.anaconda.org/DavidMertz accelerate-skimage
 这样就下载成功了。
+
+
+
+
+
+#################################
+
+- 挂载硬盘
+
+```python
+	#挂载硬盘
+	sudo fdisk -l #查看磁盘位置，假设/dev/sdd1
+	sudo mkdir /media/usr/DiskName 
+	sudo mount /dev/sdd1 /media/usr/DiskName #挂载到指定路径DiskName
+	
+	#卸载硬盘
+	sudo umount /media/usr/DiskName
+
+```
+
