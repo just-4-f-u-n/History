@@ -14,7 +14,7 @@ jupyter lab --generate-config
 
 #运行试试
 #单次运行
-jupyter lab --ip=0.0.0.0 --port=9003 #9001,9002已用
+jupyter lab --ip=0.0.0.0 --port=9003 
 #后台运行
-nohup jupyter lab --ip=0.0.0.0 --port=9003 &  
+nohup jupyter lab --ip=0.0.0.0 --no-browser --port=9003 &  
 
