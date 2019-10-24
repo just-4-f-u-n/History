@@ -40,9 +40,21 @@ conda activate HUAWEI
 5. 安装tensorflow-gpu=1.13
 最基本的方法是：conda install 包的名字，比如conda install tensorflow-gpu=1.13
 
-千万不要conda install tensorflow-gpu，会给你装最新版tf2.0！
+## 千万不要conda install tensorflow-gpu，会给你装最新版tf2.0！
 
 如果搜不到，就执行：conda install --channel https://conda.anaconda.org/anaconda tensorflow-gpu=1.13
+
+国内源（兼容windows）：
+
+（ apt-get install python-pip python-dev)
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1   
+
+
+
+
+
+
 
 6. 其他
 
