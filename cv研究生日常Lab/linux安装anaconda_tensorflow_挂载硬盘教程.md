@@ -72,6 +72,44 @@ anaconda show  DavidMertz/accelerate-skimage # 展示更多关于DavidMertz/acce
 
 
 
+###########################
+
+tensorflow-gpu  1.13版本
+
+实验室给配了个rtx2070s的电脑，在win10中装tensorflow1.13
+
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1
+
+(ubuntu 版
+
+sudo apt-get install python-pip python-dev
+
+sudo python -m pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1
+
+)
+
+注：必须指定tf版本，否则会装2.0版本
+
+###########################
+
+pytorch-gpu
+
+实验室给配了个rtx2070s的电脑，在win10中装pytorch
+
+只去鲁大师装了显卡的驱动，然后直接装pytorch gpu版：
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/free/
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/
+
+config --set show_channel_urls yes
+
+conda config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/
+
+conda install pytorch torchvision cudatoolkit=9.0
+
+安装完毕
+
 
 
 #################################
