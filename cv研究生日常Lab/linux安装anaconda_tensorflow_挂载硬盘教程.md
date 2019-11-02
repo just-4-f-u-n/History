@@ -78,7 +78,7 @@ tensorflow-gpu  1.13版本
 
 实验室给配了个rtx2070s的电脑，在win10中装tensorflow1.13
 
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1
+conda install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1
 
 (ubuntu 版
 
