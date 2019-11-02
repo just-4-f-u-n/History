@@ -76,11 +76,21 @@ anaconda show  DavidMertz/accelerate-skimage # 展示更多关于DavidMertz/acce
 
 tensorflow-gpu  1.13版本
 
-实验室给配了个rtx2070s的电脑，在win10中装tensorflow1.13
+实验室给配了个rtx2070s的电脑，在win10中装tensorflow1.13   
 
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1
+GPU版 一句话搞定： (自动安装版本对应的cuda和cudnn
 
-也可以试试 conda install tensorflow-gpu==1.13.1
+conda install tensorflow-gpu==1.13.1
+
+CPU版 一句话搞定：
+
+conda install tensorflow==1.13.1
+
+
+
+#else:(not recommended)
+
+（pip install -i https://pypi.tuna.tsinghua.edu.cn/simple tensorflow-gpu==1.13.1
 
 (ubuntu 版
 
