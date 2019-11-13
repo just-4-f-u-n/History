@@ -7,5 +7,6 @@ a=urequests.get(url)
 
 with open('download.py','wb') as f:
     f.write(a.content)
-    f.close
+    f.close()
+    
 print("ok")
