@@ -1,6 +1,9 @@
 from ctypes import *
 #dll = cdll.LoadLibrary('dlltest.dll')  #c
-dll = cdll.LoadLibrary('dlltest2.dll')  #cpp
+# dll = cdll.LoadLibrary('dlltest2.dll')  #cpp
+
+#.so
+dll = CDLL("./dlltest2.so")
 
 a=dll.Double(123)
 print(type(a))
