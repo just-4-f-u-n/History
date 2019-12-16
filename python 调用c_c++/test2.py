@@ -31,3 +31,4 @@ carray = (c_double*len(pyarray))(*pyarray)
 dll.double_selfadd1.restype = POINTER(c_double)
 result=dll.double_selfadd1(carray,len(pyarray))
 print(result[0])
+np_result = np.ctypeslib.as_array(result,[5])  #转numpy  共享内存
