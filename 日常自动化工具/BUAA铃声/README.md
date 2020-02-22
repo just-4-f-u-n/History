@@ -6,21 +6,19 @@
 
 
 
-
-
-1)    直接下载此exe，但是会报木马，添加信任即可（皮毛技术，毫无内涵）
-
-
-
-2） 自己动手，生成脚本*（注：需python3环境且需安装playsound包、pyinstaller包）*
-
-a.安装py包
-
-pip（pip3）安装playsound和pyinstaller即可
+方法一、直接下载此exe，但是会报木马，添加信任即可（皮毛技术，毫无内涵）
 
 
 
-b.输入代码本地测试，两个mp3文件放在同级目录，buaa_alert.py如下
+方法二、 自己动手，生成脚本*（注：需python3环境且需安装playsound包、pyinstaller包）*
+
+​	a. 安装py包
+
+​		pip（pip3）安装playsound和pyinstaller即可
+
+
+
+​	b. 输入代码本地测试，两个mp3文件放在同级目录，buaa_alert.py如下
 
 ```python
 from playsound import playsound
@@ -49,13 +47,13 @@ while 1:
 
 
 
-c. 使用pyintaller打包成单个exe
+​	c. 使用pyintaller打包成单个exe
 
-cmd命令行在同级目录输入
+​		cmd命令行在同级目录输入
 
-`pyinstaller -F -w buaa_alert.py`
+`		pyinstaller -F -w buaa_alert.py`
 
-其中-F表示生成单个无依赖文件的exe程序，之后即可在同级目录下的dist文件夹中看到孤零零的exe文件，添加信任即可，此exe即可单独食用
+​		其中-F表示生成单个无依赖文件的exe程序，之后即可在同级目录下的dist文件夹中看到孤零零的exe文件，添加信任即可，此exe即可单独食用
 
 
 
