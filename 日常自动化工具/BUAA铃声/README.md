@@ -32,7 +32,7 @@ last_time = '00:00'
 while 1:
     try:
         temp_time = datetime.datetime.now().strftime('%H:%M')
-        if temp_time is not last_time:
+        if temp_time != last_time:
             last_time = temp_time
             if temp_time in open_time:
                 playsound('1.mp3')
