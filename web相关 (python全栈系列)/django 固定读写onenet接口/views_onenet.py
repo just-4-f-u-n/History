@@ -1,9 +1,8 @@
-import sys
-sys.path.append('/var/www/django1_nginx/app1')
+# import sys
+# sys.path.append('/var/www/django1_nginx/app1')
 
 from django.shortcuts import render
 from django.http import HttpResponse,JsonResponse
-import config
 import os
 import json
 import time
