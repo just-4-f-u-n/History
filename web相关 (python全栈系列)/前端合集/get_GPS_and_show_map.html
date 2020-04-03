@@ -89,31 +89,34 @@ body{height:100%;margin:0px;padding:0px}
             //设置圆形边线的宽度，取值为大于等于1的整数
             circle.setStrokeWeight(1);
             map.addOverlay(circle);            //增加圆
+            
+            ///
+                //开启鼠标滚轮缩放
+                map.enableScrollWheelZoom(true);
+                //添加平移缩放控件
+                var opts = {type: BMAP_NAVIGATION_CONTROL_SMALL}
+                map.addControl(new BMap.NavigationControl(opts));
+                //添加比例尺控件
+                map.addControl(new BMap.ScaleControl());
+                //添加缩略地图控件
+                map.addControl(new BMap.OverviewMapControl());
+                //// 仅当设置城市信息时，MapTypeControl的切换功能才能可用
+                map.addControl(new BMap.MapTypeControl());
+                // map.setCurrentCity("青岛");
+
+                //修改地图风格
+                //清新蓝风格(light)
+                //黑夜风格(dark)
+                //自然绿风格(grassgreen)
+                //精简风格(googlelite)
+                //默认地图样式(normal)
+                var mapStyle={  style : "normal" }
+                map.setMapStyle(mapStyle);
+
         }
     }
 
 
-    //开启鼠标滚轮缩放
-    map.enableScrollWheelZoom(true);
-    //添加平移缩放控件
-    var opts = {type: BMAP_NAVIGATION_CONTROL_SMALL}
-    map.addControl(new BMap.NavigationControl(opts));
-    //添加比例尺控件
-    map.addControl(new BMap.ScaleControl());
-    //添加缩略地图控件
-    map.addControl(new BMap.OverviewMapControl());
-    //// 仅当设置城市信息时，MapTypeControl的切换功能才能可用
-    map.addControl(new BMap.MapTypeControl());
-    // map.setCurrentCity("青岛");
-
-    //修改地图风格
-    //清新蓝风格(light)
-    //黑夜风格(dark)
-    //自然绿风格(grassgreen)
-    //精简风格(googlelite)
-    //默认地图样式(normal)
-    var mapStyle={  style : "normal" }
-    map.setMapStyle(mapStyle);
 
     // 编写自定义函数,创建标注
     // function addMarker(point,label){
