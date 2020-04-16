@@ -18,3 +18,6 @@ headers = { "api-key":password}
 data={'limit':limit_num} #可缺省
 receive = requests.get(url,headers = headers,params = data).text
 data = (json.loads(receive))['data']
+##
+data['datastreams'][0]['datapoints'][0]['value']
+data['datastreams'][1]['datapoints'][0]['value']
