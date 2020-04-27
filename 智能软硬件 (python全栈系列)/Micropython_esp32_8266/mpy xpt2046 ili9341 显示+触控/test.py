@@ -34,3 +34,5 @@ while True:
         break
 
 
+##更简单的方法，直接通过Pen：1-》0 判断按下，然后读取 xpt.raw_touch() -> (2143,2399)
+
