@@ -5,6 +5,7 @@ i2c=machine.I2C(scl=machine.Pin(22),sda=machine.Pin(23))
 
 oled=ssd1306.SSD1306_I2C(128,64,i2c)
 
+oled.fill(0)
 
 oled.text("micro",50,54)
 oled.show()
