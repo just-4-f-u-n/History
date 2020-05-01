@@ -18,11 +18,19 @@
 # >>> com.read()
 # b'qwe'
 
+####最后一个字节是和校验，前面所有字节和的低8位（%256）
+import struct
+def get_add_byte(bytes_before):
+    add_sum = 0
+    for ii in range(len(bytes_before)):
+        add_sum += bytes_before[ii]
+    add_sum = add_sum%256
+    return struct.pack("B",add_sum)
 
 from serial_uart import uart
 import time
 
-com = uart(22, 23, False, 512)  #tx=22, rx=23
+com = uart(27, 26, False, 512)  #tx=27, rx=26
 com.open(9600)
 
 #播放当前
@@ -60,7 +68,7 @@ com.write(b'\xAA\x13\x01\x14\xD2')  #20级=\x14
 #组合播放（放在ZH文件夹下 01.mp3+02.mp3）
 com.write(b'\xaa\x1b\x04\x30\x31\x30\x32\x8c') # 04 长度，'0'=\x30  曲目1高字节+曲目1低字节+曲目2...
 ##可以组合两首，立刻结束第一首 从而只播放第二首
-com.write(b'\xaa\x1b\x04\x30\x31\x30\x32\x8c')  #其他名字有bug，暂时不推荐
+com.write(b'\xaa\x1b\x04\x30\x32\x30\x31\x8c')  #其他名字有bug，暂时不推荐 只能01 02
 com.write(b'\xaa\x10\x00\xba')#结束播放
 com.write(b'\xaa\x1b\x04\x30\x32\x30\x31\x8c')
 com.write(b'\xaa\x10\x00\xba')#结束播放
@@ -75,4 +83,24 @@ com.write(b'\xaa\x09\x00\xb3')
 
 #查询总曲目
 com.write(b'\xaa\x12\x00\xbc')
+
+#####################################################
+##播放指定曲目
+
+from serial_uart import uart
+u3 = uart(27, 26, False, 512)  #tx=27, rx=26
+u3.open(9600)
+# u3.write(b'\xaa\x07\x02\x00\x04\xBB')
+#音量+
+u3.write(b'\xaa\x14\x00\xBE')
+#音量-
+u3.write(b'\xaa\x15\x00\xBF')
+
+u3.write(b'\xaa\x02\x00\xac') #播放
+#音量设置[0,30] 16进制  默认20级  不好使
+
+
+u3.write(b'\xaa\x13\x01\x03\xc1')
+u3.write(b'\xaa\x13\x01\x1e\xdc') #和校验
+u3.write(b'\xaa\x02\x00\xac') #播放
 
