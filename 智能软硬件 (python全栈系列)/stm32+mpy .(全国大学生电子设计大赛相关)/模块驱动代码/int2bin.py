@@ -1,4 +1,6 @@
 
+#其实可以直接用bytearray([10,11,12]) 这种函数  不需import
+
 def int2bin(a,bytes):
     m = int(bin(a)[2:])
     if bytes==1:
