@@ -40,7 +40,7 @@ def clear_ini(path):
 def add_ini(path,data):
     c=config(path)
     ret = c.readAll()
-    ret[len(ret).keys()] = data
+    ret[(str)(len(ret.keys()))] = data
     c.writeConfig(ret)
     return "OK"
 
