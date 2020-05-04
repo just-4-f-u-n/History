@@ -28,3 +28,21 @@ class config():
         data = json.dumps(dict)       
         f.write(data)                   
         f.close()                  
+
+####################
+#管理相关函数
+def clear_ini(path):
+    c=config(path)
+    c.writeConfig({})
+    return "OK"
+
+#按序号添加
+def add_ini(path,data):
+    c=config(path)
+    ret = c.readAll()
+    ret[len(ret).keys()] = data
+    c.writeConfig(ret)
+    return "OK"
+
+
+
