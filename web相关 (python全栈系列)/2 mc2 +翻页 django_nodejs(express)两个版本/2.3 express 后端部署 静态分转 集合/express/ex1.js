@@ -9,7 +9,7 @@ var app = express();
 const bodyParser = require('body-parser');
 const router = require('./router/index')  //  引入路由
 
-app.use('/public', express.static('public'));
+app.use('/', express.static('public'));
  
 app.use(bodyParser.urlencoded({
   extends: true
@@ -26,13 +26,13 @@ app.all('*', (req, res, next) => {
 });
 
 
-app.get('/', function (req, res) {
-   res.send('Hello World');
-   // response = {
-//   message:'File uploaded successfully', 
-// };
-// res.end( JSON.stringify( response ) );
-})
+// app.get('/', function (req, res) {
+   // res.send('Hello World');
+   // // response = {
+// //   message:'File uploaded successfully', 
+// // };
+// // res.end( JSON.stringify( response ) );
+// })
 
 //  使用路由 /api 是路由指向名称
 app.use(`/api`,router)
