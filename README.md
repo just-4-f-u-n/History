@@ -1,5 +1,6 @@
 # 软硬件相关 全栈式开发记录
 
+[重要！！个人博客入口 含bilibli演示链接](https://www.cnblogs.com/sharklet/p/12543620.html)
 
 
 - 全国大学生电子设计大赛相关
